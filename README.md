@@ -1,3 +1,69 @@
+# Invitium – Aplikasi Web Undangan Otomatis
+
+Invitium adalah aplikasi web untuk membuat undangan secara langsung tanpa proses login.  
+Pengguna cukup mengisi data undangan dan data penerima, kemudian sistem akan otomatis menghasilkan undangan dalam format PDF dan mengirimkannya ke email penerima.  
+Setelah pengiriman berhasil, sistem akan menampilkan notifikasi status pengiriman undangan.
+
+---
+
+## 🎯 Tujuan Aplikasi
+
+Invitium dibuat untuk mempermudah proses pembuatan dan pengiriman undangan secara digital dengan alur yang sederhana dan efisien, tanpa perlu akun atau autentikasi pengguna.  
+Aplikasi ini juga bertujuan untuk menerapkan konsep pengembangan aplikasi web, meliputi:
+- Pengolahan data menggunakan CRUD
+- Basis data relasional
+- Generate dokumen otomatis (PDF)
+- Pengiriman email terintegrasi
+- Notifikasi status proses sistem
+
+---
+
+## 🧱 Tech Stack
+
+- Bahasa        : PHP 8.2+
+- Framework     : Laravel 12
+- Database      : MySQL / MariaDB
+- Frontend      : Blade Template + Vite
+- PDF Generator : DomPDF
+- Email Service : SMTP (Mailtrap / Gmail SMTP)
+
+---
+
+## ✨ Fitur Utama
+
+- Form input data undangan  
+  (judul, isi undangan, tanggal, waktu, lokasi, dan keterangan lain)
+- Form input data penerima undangan  
+  (nama penerima dan alamat email)
+- Pembuatan undangan otomatis dalam format PDF
+- Pengiriman undangan ke email penerima secara langsung
+- Notifikasi pop-up pada website setelah undangan berhasil dikirim
+
+---
+
+## 📊 Skema Basis Data
+
+Struktur tabel dapat dilihat secara lengkap pada folder database/migrations.  
+Tabel utama yang digunakan antara lain:
+- invitations → menyimpan data undangan
+- recipients → menyimpan data penerima undangan (termasuk email)
+- invitation_recipients → relasi undangan dan penerima
+
+---
+
+## 🔄 Alur Sistem
+
+1. Pengguna membuka website Invitium.
+2. Pengguna mengisi data undangan melalui form.
+3. Pengguna mengisi data penerima undangan (nama, jabatan, afiliasi, dan email).
+4. Sistem memproses data dan membuat file undangan dalam format PDF.
+5. Sistem mengirimkan undangan PDF ke email penerima.
+6. Website menampilkan notifikasi pop-up bahwa undangan telah berhasil dikirim.
+
+
+---
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
